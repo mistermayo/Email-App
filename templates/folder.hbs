@@ -26,21 +26,17 @@
 
 <h2>Emails in this folder</h2>
   {{#each email in emails emailController="email"}}
+    <p>{{#link-to 'email' email}}
+      <h4>{{email.address}}{{email.subject}}</h4>
+      <!-- <button class="btn btn-xs btn-primary" {{action 'details'}}>Open Email</button> -->
+      {{/link-to}}
+    </p>
 
-    <hr>
-      <p>
-        {{email.address}}{{email.subject}}
-        <button class="btn btn-xs btn-primary" {{action 'body'}}>Open Email</button>
-        <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
-      </p>
-
-    {{#if email.isShowing}}
+    <!-- {{#if email.isShowing}}
       {{email.body}}
-    {{/if}}
-
-    </hr>
-
-  {{/each}}
+    {{/if}} -->
+    {{/each}}
+<!-- </div> -->
 
 <p>{{#link-to 'new-email' this class="btn btn-success"}}Create New Email{{/link-to}}</p>
 <div>

@@ -1,3 +1,13 @@
+body {
+  font-family: 'Lobster', cursive;
+}
+
+.top {
+  text-align: center;
+  color: #D4AF37;
+  font-size: 500%;
+}
+
 ul {
   padding-left: 0;
 }
@@ -20,7 +30,6 @@ li a {
   margin-bottom: 20px;
 }
 
-.jumbotron {
-  margin: 0px 25px;
-  background-color: #ddd;
+.navbar {
+  background-color: #orange;
 }

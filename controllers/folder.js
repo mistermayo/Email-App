@@ -1,5 +1,5 @@
 Email.FolderController = Ember.ObjectController.extend({
-      isEditing: false,
+  isEditing: false,
   actions: {
     edit: function() {
       this.set('isEditing', true);

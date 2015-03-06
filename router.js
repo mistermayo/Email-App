@@ -3,8 +3,8 @@ Email.Router.map(function() {
   this.resource('folder', {path: ':folder_id'},
     function() {
       this.resource('new-email');
-      // this.resource('item');
+      this.resource('email', {path: ':email_id'});
+
     });
   this.resource('new-folder');
-  this.resource('email', {path: ':email_id'});
 });

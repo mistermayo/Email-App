@@ -1,5 +1,5 @@
-Email.EmailssRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('email');
-  }
-});
+// Email.EmailssRoute = Ember.Route.extend({
+//   model: function() {
+//     return this.store.find('email');
+//   }
+// });
