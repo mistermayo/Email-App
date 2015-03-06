@@ -1,0 +1,14 @@
+<h2>New Message</h2>
+
+<form>
+  <div class="form-group">
+    <label for="address">Your Email Address</label>
+    {{input value=address id="address" class="form-control" autofocus="autofocus"}}
+    <label for="subject">Subject:</label>
+    {{input value=subject id="subject" class="form-control"}}
+    <label for="body">Write your message:</label>
+    {{textarea value=body id="body" class="form-control" rows="5"}}
+  </div>
+
+  <button class="btn btn-primary" {{action "save"}}>Send your Message!</button>
+</form>
