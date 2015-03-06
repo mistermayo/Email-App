@@ -27,14 +27,14 @@
 </div>
 
 
-<!-- {{outlet}} -->
 <div class="col-md-4">
 <h2>Emails in this folder</h2>
   {{#each email in emails emailController="email"}}
-  <p>{{#link-to 'email' email}}
+  <p>
+    {{#link-to 'email' email}}
     address: {{email.address}}<br />
     subject: {{email.subject}}
-     {{/link-to}}
+    {{/link-to}}
   </p>
   {{/each}}
 

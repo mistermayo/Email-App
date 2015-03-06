@@ -1,5 +1,5 @@
-Email.CategoryRoute = Ember.Route.extend({
+Email.FolderRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('folder', params.email_id);
+    return this.store.find('folder', params.folder_id);
   }
 });

@@ -1,6 +1,12 @@
 <h2>My name is Tucker Mayo, and I'm a student at Epicodus.</h2>
     <p>This is an Ember app that I built on March 6, 2015</p>
-    
+
+    {{#if isAboutShowing}}
+      <button class="btn btn-info" {{action 'hideAbout'}}>Hide photo :(</button>
+      <p><img src="css/monkey.jpg"></p>
+    {{else}}
+      <button class="btn btn-info" {{action 'showAbout'}}>Me and Monkeys</button>
+    {{/if}}
 <div>
   <br />
   {{#link-to 'folders' classNames="btn btn-warning"}}See list of Folders{{/link-to}}
