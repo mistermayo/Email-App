@@ -1,5 +1,6 @@
 body {
   font-family: 'Lobster', cursive;
+  background-color: #8EBB7E;
 }
 
 .top {
@@ -21,15 +22,15 @@ li a {
   color: orange;
 }
 
-#rumble {
-  width: 900px;
-  margin-right: 15px;
-}
-
-#rumble-form {
-  margin-bottom: 20px;
-}
-
 .navbar {
-  background-color: #orange;
+  background-color: #FF9C58;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  color: #000;
 }
