@@ -1,0 +1,48 @@
+<h1>{{name}}</h1>
+
+{{#if isEditing}}
+  <div class="form-div">
+    <form>
+      <div class="form-control">
+        <label class for="name">Folder Name</label>
+        {{input value=name id="name" class="form-control"}}
+      </div>
+    </form>
+  </div>
+  <div class="button-div">
+    <button class="btn btn-success" {{action 'save'}}>Save</button>
+  </div>
+
+{{else}}
+
+<p>{{name}}</p>
+
+<button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+<button class="btn btn-sm btn-danger" {{action 'delete'}}>Delete Folder</button>
+
+{{/if}}
+
+{{outlet}}
+
+<h2>Emails in this folder</h2>
+  <div class="thumbnails">
+    <ul>
+      {{#each email in emails emailController="email"}}
+        <li>
+            {{#link-to 'email' this class="btn btn-success"}}
+            {{email.subject}}<br />
+            {{email.address}}<br />
+            <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+
+            {{/link-to}}
+       </li>
+      {{/each}}
+    </ul>
+  </div>
+<br />
+
+<p>{{#link-to 'new-email' this class="btn btn-success"}}Create New Email{{/link-to}}</p>
+<div>
+  <br />
+  {{#link-to 'folders' classNames="btn btn-warning"}}See list of Folders{{/link-to}}
+</div>

@@ -1,0 +1,10 @@
+<h1>Folders</h1>
+<hr>
+
+<ul>
+  {{#each folder in model}}
+    <li>{{#link-to 'folder' folder}}{{folder.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'new-folder' classNames="btn btn-primary"}}New Folder{{/link-to}}
