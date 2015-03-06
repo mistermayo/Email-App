@@ -1,6 +1,13 @@
-<h2>{{subject}}{{address}}</h2>
-  <div class="col-md-6">
+<h4>address: {{address}}<br />
+    subject: {{subject}}</h4>
+<div class="col-md-6">
   <ul>
-    <li>Body: {{body}} </li>
+    <li>{{body}}</li>
   </ul>
+</div>
+<div>
+  <br />
+  <button classNames="btn btn-warning" {{action 'delete'}}>Delete Message</button>
+
+  {{#link-to 'folder' folder classNames="btn btn-warning"}}Close Message{{/link-to}}
 </div>

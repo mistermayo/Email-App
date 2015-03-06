@@ -21,25 +21,26 @@
 <button class="btn btn-sm btn-danger" {{action 'delete'}}>Delete Folder</button>
 
 {{/if}}
-
-{{outlet}}
-
-<h2>Emails in this folder</h2>
-  {{#each email in emails emailController="email"}}
-    <p>{{#link-to 'email' email}}
-      <h4>{{email.address}}{{email.subject}}</h4>
-      <!-- <button class="btn btn-xs btn-primary" {{action 'details'}}>Open Email</button> -->
-      {{/link-to}}
-    </p>
-
-    <!-- {{#if email.isShowing}}
-      {{email.body}}
-    {{/if}} -->
-    {{/each}}
-<!-- </div> -->
-
-<p>{{#link-to 'new-email' this class="btn btn-success"}}Create New Email{{/link-to}}</p>
 <div>
   <br />
   {{#link-to 'folders' classNames="btn btn-warning"}}See list of Folders{{/link-to}}
+</div>
+
+
+<!-- {{outlet}} -->
+<div class="col-md-4">
+<h2>Emails in this folder</h2>
+  {{#each email in emails emailController="email"}}
+  <p>{{#link-to 'email' email}}
+    address: {{email.address}}<br />
+    subject: {{email.subject}}
+     {{/link-to}}
+  </p>
+  {{/each}}
+
+  <p>{{#link-to 'new-email' this class="btn btn-success"}}Create New Email{{/link-to}}</p>
+</div>
+
+<div class="col-md-8">
+  {{outlet}}
 </div>
